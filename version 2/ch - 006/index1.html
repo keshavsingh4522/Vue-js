@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>CH 4</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="webpage">
+	<input type="text" id="userinput" v-on:input='demo'>
+	<br>
+	<!-- <button v-on:click='demo'>update</button> -->
+	{{ userinput }}
+</div>
+<script>
+	
+	new Vue({
+		el:"#webpage",
+		data:{userinput:""},
+		methods:{
+			demo:function(){
+				var v=document.querySelector("#userinput").value;
+				this.userinput=v;
+			}
+		}
+	});
+</script>
+</body>
+</html>

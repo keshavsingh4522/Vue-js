@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>CH 5</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="webpage">
+	{{ demo() }}
+	<br>
+	{{ element }}
+	<div v-html="element"></div><br>
+	<button v-on:click='demo2'>btn</button><br>
+	<div id="result">
+		
+	</div>
+</div>
+<script>
+	
+	new Vue({
+		el:"#webpage",
+		data:{element:"<h1>Keshav Singh Rajput</h1>"},
+		methods:{
+			demo:()=>{
+				return "<h1>Keshav Singh Rajput</h1>";
+			},
+			demo2:function(){
+				document.querySelector('#result').innerHTML='important method'+this.element;
+				alert(this.element);
+			}
+		}
+	});
+</script>
+</body>
+</html>

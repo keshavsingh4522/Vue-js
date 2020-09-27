@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>CH 4</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="webpage">
+	<h1>
+		{{ first() }}
+	</h1>
+	<p>
+		{{ second() }}
+	</p>
+	<button v-on:click='third'>click here</button>
+	<input type="text" v-on:keyup='third'>
+</div>
+<script>
+	
+	new Vue({
+		el:"#webpage",
+		methods:{
+			first:()=>{
+				return "Keshav Singh";
+			},
+			second:()=>{
+				return "web developer, programmer";
+			},
+			third:()=>{
+				// print();
+				alert("Hi how are you?");
+			}
+		}
+	});
+</script>
+</body>
+</html>

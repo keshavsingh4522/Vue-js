@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>CH 6</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="webpage">
+	<button v-on:click='demo'>update</button>
+	{{ name }}
+</div>
+<script>
+	
+	new Vue({
+		el:"#webpage",
+		data:{
+			name:"Keshav",
+			class:"B.Tech",
+			roll:'17EJCCS080'
+		},
+		methods:{
+			demo:function(){
+				if(this.name=='Keshav'){
+					this.name='Pradeep';
+				}
+				else{
+					this.name='Keshav';
+				}
+			}
+		}
+	});
+</script>
+</body>
+</html>
