@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>CH 7</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<noscript>
+	<h1>Enable javascript to view functionalaty of application otherwise application will not work properly.</h1>
+</noscript>
+
+<div id="webpage">
+	{{ name }} <br>
+	{{roll}}
+</div>
+<script>
+Vue.createApp({
+	data(){
+		return{
+			name:"keshav Singh",
+			roll:"17EJCCS080",
+		}
+	}
+}).mount("#webpage");
+</script>
+</body>
+</html>
